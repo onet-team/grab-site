@@ -17,7 +17,7 @@
     # the installation media is also the installation target,
     # so we don't want to provide the installation configuration.nix.
     packages = {
-      x86_64 = { # system??
+      x86_64linux = { # system??
         #~ cyclop-orange_pi_5_plus = nixos-generators.nixosGenerate {
           #~ system = "aarch64-linux";
           #~ meta = {
@@ -25,6 +25,8 @@
             #~ nixpkgs = import nixos-rk3588.inputs.nixpkgs {inherit system;};
             #~ specialArgs = nixos-rk3588.inputs;
           #~ };
+
+default = grab-site.default;
 
            modules = [
             #~ # import the rk3588 module, which contains the configuration for bootloader/kernel/firmware
@@ -40,3 +42,4 @@
     };
   };
 }
+# parts and forEachSystem
