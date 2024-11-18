@@ -12,7 +12,7 @@
     system = "x86_64-linux";
   in {
     packages = {
-      x86_64linux = {
+      x86_64-linux = {
         default = grab-site.default;
 
         modules = [
